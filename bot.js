@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = 'a';
+const prefix = '!';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['ahelp','Type ahelp'];
+    var setGame = ['!help',type !help S4E'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -88,9 +88,6 @@ ${prefix}bans / عدد الاشخاص المبندة
 ${prefix}avatar/صورتك او صورة الي تمنشنو
 ${prefix}embed/يكرر الي تقولو بشكل حلو
 ${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي
-${prefix}inv/لدعوة البوت الى سيرفرك
-${prefix}support/سيرفر الدعم
-${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت
 **
   `
 ,`
@@ -109,7 +106,7 @@ ${prefix}hchannel / اخفاء الشات
 ${prefix}schannel / اضهار الشات المخفية
 ${prefix}clr <numbr> / مسح الشات بعدد
 ${prefix}clear / مسح الشات
-${prefix}mute @user <time> / اعطاء العضو ميوت 
+${prefix}اكتم @user <time> / اعطاء العضو ميوت 
 ${prefix}unmute @user / لفك الميوت عن الشخص 
 ${prefix}kick @user <reason> / طرد الشخص من السيرفر
 ${prefix}ban @user <reason> / حضر الشخص من السيرفر
@@ -206,7 +203,7 @@ const coolDown = new Set();
 client.on('message',async message => {
     
 if(message.author.bot) return;
-if(!credits[message.author.id]) credits[message.author.id] = {
+if(!c[message.author.id]) credits[message.author.id] = {
     credits: 50
 };
 
@@ -227,7 +224,7 @@ message.channel.send(`**${message.author.username}, your :credit_card: balance i
 
 client.on('message', async message => {
     let amount = 250;
-    if(message.content.startsWith(prefix + "daily")) {
+    if(message.content.startsWith(prefix + "يوميه")) {
     if(message.author.bot) return;
     if(coolDown.has(message.author.id)) return message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes in \`\`1 Day\`\`.**`);
     
@@ -1083,7 +1080,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 var command = message.content.split(" ")[0];
 command = command.slice(prefix.length);
 var args = message.content.split(" ").slice(1);
-    if(command == "mute") {
+    if(command == "اكتم") {
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return message.reply("**يجب عليك المنشن اولاّ**:x: ") .then(m => m.delete(5000));
     if(tomute.hasPermission("MANAGE_MESSAGES"))return      message.channel.send('**للأسف لا أمتلك صلاحية** `MANAGE_MASSAGEES`');
@@ -1148,7 +1145,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "kick") {
+  if (command == "برا") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**You Don't Have ` KICK_MEMBERS ` Permission**");
@@ -1183,7 +1180,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "ban") {
+  if (command == "طياره") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك الصلاحيات المطلوبه**");
@@ -3524,4 +3521,4 @@ client.on('guildMemberAdd', member => {
 return channel.send("")
     }
     )});
-client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUGZA.mhG8YsKSFtfAX2uf_e8lnpNAL5I")
+client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUM1Q.Lko2mWby9UYj3SSQnkVvMsaYq40")
