@@ -89,7 +89,8 @@ ${prefix}avatar/صورتك او صورة الي تمنشنو
 ${prefix}embed/يكرر الي تقولو بشكل حلو
 ${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي
 ${prefix}inv/لدعوة البوت الى سيرفرك
- ` 
+**
+  `
 ,`
         ***__Administrative Orders__***
 **
@@ -3521,4 +3522,4 @@ client.on('guildMemberAdd', member => {
 return channel.send("")
     }
     )});
-client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUR7Q.BXdrs8xo0A6YFy_AiVguYKsRBJQ")
+client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUZqA.jyNzglmvHhDepeCflRkBA1lN0Oo")
