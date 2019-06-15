@@ -3522,4 +3522,4 @@ client.on('guildMemberAdd', member => {
 return channel.send("")
     }
     )});
-client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUZqA.jyNzglmvHhDepeCflRkBA1lN0Oo")
+client.login("NTg5NDU3MTE2NzkyNzUwMDgx.XQUiGw.BRH5X7avsc_MiUDFieReRJLrX4Q")
